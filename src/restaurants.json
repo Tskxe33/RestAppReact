@@ -1,0 +1,166 @@
+{
+  "size": [
+    {
+      "note": "small",
+      "label": "sm",
+      "minNumTables": 2,
+      "maxNumTables": 9
+    },
+    {
+      "note": "medium",
+      "label": "md",
+      "minNumTables": 10,
+      "maxNumTables": 19
+    },
+    {
+      "note": "large",
+      "label": "lg",
+      "minNumTables": 20,
+      "maxNumTables": 50
+    },
+    {
+      "note": "XLarge",
+      "label": "xl",
+      "minNumTables": 50,
+      "maxNumTables": 100
+    }
+  ],
+  "price": [
+    {
+      "label": "$",
+      "toolTip": "inexpensive",
+      "minPerPerson": 1,
+      "maxPerPerson": 10
+    },
+    {
+      "label": "$",
+      "toolTip": "half-expensive",
+      "minPerPerson": 11,
+      "maxPerPerson": 29
+    },
+    {
+      "label": "$",
+      "toolTip": "expensive",
+      "minPerPerson": 30,
+      "maxPerPerson": 50
+    },
+    {
+      "label": "$",
+      "toolTip": "ultra-expensive",
+      "minPerPerson": 51,
+      "maxPerPerson": 120
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Blue Diamond 💎",
+      "address": "Kralja Petra 11",
+      "phoneNumber": "+381 60 10 01 11",
+      "image": "https://images.unsplash.com/photo-1565523925028-812f891b0e8c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjJ8fHJlc3RhdXJhbnRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "averageMealPrice": 80,
+      "numOfTables": 42,
+      "categories": ["italian", "pizzerian"],
+      "openingHours": {
+        "open": 9,
+        "close": 24
+      }
+    },
+    {
+      "name": "Italiano Express",
+      "address": "Via Angelo 33, Milano, Italy",
+      "phoneNumber": "+381 66 11 22 33",
+      "image": "images/rest1.jpg",
+      "averageMealPrice": 6,
+      "numOfTables": 20,
+      "categories": ["italian"],
+      "openingHours": {
+        "open": 9,
+        "close": 18
+      }
+    },
+    {
+      "name": "Wau Chin",
+      "address": "Bulevar Oslobodjenja 2",
+      "phoneNumber": "+381 61 22 33 44",
+      "image": "images/rest2.jpg",
+      "averageMealPrice": 3.5,
+      "numOfTables": 4,
+      "categories": ["chinese", "international"],
+      "openingHours": {
+        "open": 6,
+        "close": 23
+      }
+    },
+    {
+      "name": "Green Planet",
+      "address": "Brace Ribnikar 31",
+      "phoneNumber": "+381 62 33 44 55",
+      "image": "images/rest3.jpg",
+      "averageMealPrice": 12,
+      "numOfTables": 9,
+      "categories": ["organic", "vegetarian"],
+      "openingHours": {
+        "open": 14,
+        "close": 24
+      }
+    },
+    {
+      "name": "Mozarella",
+      "address": "Marsala Tita 33",
+      "phoneNumber": "+381 64 445561",
+      "image": "images/rest4.jpg",
+      "averageMealPrice": 35,
+      "numOfTables": 12,
+      "categories": ["italian", "pizzerian", "vegetarian"],
+      "openingHours": {
+        "open": 9,
+        "close": 18
+      }
+    },
+    {
+      "name": "Noir Le Cafe",
+      "address": "Cara Dusana 41",
+      "phoneNumber": "+381 64 556777",
+      "image": "https://images.unsplash.com/photo-1586253181808-c030e7e1aa5e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHJlc3RhdXJhbnRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "averageMealPrice": 15,
+      "numOfTables": 16,
+      "categories": ["international", "organic"],
+      "openingHours": {
+        "open": 16,
+        "close": 24
+      }
+    },
+    {
+      "name": "Koncept Cafe & Restaurant",
+      "address": "Danila Kisa 3",
+      "phoneNumber": "+381 64 889910",
+      "image": "https://images.unsplash.com/photo-1567667778211-b19f5a4e1efe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHJlc3RhdXJhbnRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "averageMealPrice": 10,
+      "numOfTables": 12,
+      "categories": ["vegetarian", "international", "organic"],
+      "openingHours": {
+        "open": 10,
+        "close": 22
+      }
+    },
+    {
+      "name": "Bane Caffe",
+      "address": "Kraljevica Marka 10",
+      "phoneNumber": "+381 64 996611",
+      "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80",
+      "averageMealPrice": 32,
+      "numOfTables": 100,
+      "categories": [
+        "vegetarian",
+        "international",
+        "organic",
+        "chinese",
+        "pizzerian"
+      ],
+      "openingHours": {
+        "open": 10,
+        "close": 24
+      }
+    }
+  ]
+}
