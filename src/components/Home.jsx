@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -16,9 +17,9 @@ const Home = () => {
           Secure Booking. Dinners and Breakfasts. Fast Food. Get Instant
           Confirmation. Best Price Guarantee. No Booking Fees.
         </p>
-        <a href="index.html" className="hero__btn">
+        <Link to="/restaurants" className="hero__btn">
           book table
-        </a>
+        </Link>
       </div>
     </section>
   );

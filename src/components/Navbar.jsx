@@ -17,7 +17,7 @@ class NavBar extends Component {
                   </Link>
                 </li>
                 <li className="nav__items">
-                  <Link to="restaurants" className="nav__links">
+                  <Link to="/restaurants" className="nav__links">
                     Find Restaurants
                   </Link>
                 </li>
