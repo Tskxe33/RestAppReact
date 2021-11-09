@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import logoImage from "../images/logoImage.png";
-import NavBarButtons from "./NavbarButtons";
+import NavBarButtons from "./NavComponents/NavbarButtons";
 
 class NavBar extends Component {
   render() {
