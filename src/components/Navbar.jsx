@@ -12,12 +12,12 @@ class NavBar extends Component {
             <div className="nav__navigation">
               <ul className="nav__list">
                 <li className="nav__items">
-                  <Link to="home.html" className="nav__links">
+                  <Link to="/" className="nav__links">
                     Home
                   </Link>
                 </li>
                 <li className="nav__items">
-                  <Link to="index.html" className="nav__links">
+                  <Link to="restaurants" className="nav__links">
                     Find Restaurants
                   </Link>
                 </li>
