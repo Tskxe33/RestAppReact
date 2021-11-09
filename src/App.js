@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
+import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/Navbar";
 import Home from "./components/Home";
-import { Route, Routes } from "react-router-dom";
+import Restaurants from "./components/Restaurants";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/restaurants" element={<Restaurants />} />
       </Routes>
     </Fragment>
   );
