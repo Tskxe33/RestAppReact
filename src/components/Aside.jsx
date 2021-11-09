@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import axios from "axios";
+import DisplayPrices from "./AsideComponents/DisplayPrices";
 
 class Aside extends Component {
   state = {
@@ -10,7 +12,30 @@ class Aside extends Component {
       `international`,
       `chinese`,
     ],
+
+    prices: [],
   };
+
+  fetchPrices = () => {
+    const priceUrl = "/restaurants.json";
+    axios
+      .get(priceUrl)
+      .then((res) => this.setState({ prices: res.data.price }));
+  };
+
+  findRestaurantByPriceRange = (restaurant, priceRange) => {
+    return restaurant.filter((rest) => {
+      return (
+        rest.averageMealPrice >= priceRange.minPerPerson &&
+        rest.averageMealPrice <= priceRange.maxPerPerson
+      );
+    });
+  };
+
+  componentDidMount() {
+    this.fetchPrices();
+  }
+
   render() {
     return (
       <aside className="aside">
@@ -19,7 +44,9 @@ class Aside extends Component {
         </h1>
         <div className="aside__options">
           <form action="GET" className="form__priceRange">
-            <div className="aside__labels aside__price-flex"></div>
+            <div className="aside__labels aside__price-flex">
+              <DisplayPrices prices={this.state.prices} />
+            </div>
           </form>
         </div>
 

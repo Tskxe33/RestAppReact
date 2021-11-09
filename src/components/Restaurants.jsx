@@ -9,11 +9,11 @@ class Restaurants extends Component {
     return (
       <div>
         <Aside />
-        <section class="rest">
-          <h1 class="rest__heading"></h1>
-          <div class="rest__card-wrap"></div>
-          <div class="rest__buttons">
-            <button class="btn btn-login">LOAD MORE</button>
+        <section className="rest">
+          <h1 className="rest__heading"></h1>
+          <div className="rest__card-wrap"></div>
+          <div className="rest__buttons">
+            <button className="btn btn-login">LOAD MORE</button>
           </div>
         </section>
       </div>
