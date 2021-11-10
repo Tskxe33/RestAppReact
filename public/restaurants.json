@@ -33,19 +33,19 @@
       "maxPerPerson": 10
     },
     {
-      "label": "$",
+      "label": "$$",
       "toolTip": "half-expensive",
       "minPerPerson": 11,
       "maxPerPerson": 29
     },
     {
-      "label": "$",
+      "label": "$$$",
       "toolTip": "expensive",
       "minPerPerson": 30,
       "maxPerPerson": 50
     },
     {
-      "label": "$",
+      "label": "$$$$",
       "toolTip": "ultra-expensive",
       "minPerPerson": 51,
       "maxPerPerson": 120
