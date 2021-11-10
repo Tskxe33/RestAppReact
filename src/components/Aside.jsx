@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
 import DisplayPrices from "./AsideComponents/DisplayPrices";
-
+import DisplaySizes from "./AsideComponents/DisplaySizes";
+import { fetchPrices } from "./../modules/prices";
+import { fetchSizes } from "./../modules/sizes";
+import PriceRange from "./AsideComponents/PriceRange";
+import SizeRange from "./AsideComponents/SizeRange";
+import WorkingTime from "./AsideComponents/Workingtime";
+import Categories from "./AsideComponents/Categories";
 class Aside extends Component {
   state = {
     categoriesList: [
@@ -14,96 +20,31 @@ class Aside extends Component {
     ],
 
     prices: [],
+    sizes: [],
   };
 
-  fetchPrices = () => {
-    const priceUrl = "/restaurants.json";
-    axios
-      .get(priceUrl)
-      .then((res) => this.setState({ prices: res.data.price }));
+  getPrices = async () => {
+    const prices = await fetchPrices();
+    this.setState({ prices });
   };
 
-  findRestaurantByPriceRange = (restaurant, priceRange) => {
-    return restaurant.filter((rest) => {
-      return (
-        rest.averageMealPrice >= priceRange.minPerPerson &&
-        rest.averageMealPrice <= priceRange.maxPerPerson
-      );
-    });
+  getSizes = async () => {
+    const sizes = await fetchSizes();
+    this.setState({ sizes });
   };
 
   componentDidMount() {
-    this.fetchPrices();
+    this.getPrices();
+    this.getSizes();
   }
 
   render() {
     return (
       <aside className="aside">
-        <h1 className="aside__heading">
-          <i className="fas fa-money-bill-alt aside__icons"></i>Price Range
-        </h1>
-        <div className="aside__options">
-          <form action="GET" className="form__priceRange">
-            <div className="aside__labels aside__price-flex">
-              <DisplayPrices prices={this.state.prices} />
-            </div>
-          </form>
-        </div>
-
-        <h1 className="aside__heading">
-          <i className="fas fa-utensils aside__icons"></i>Restaurants Size
-        </h1>
-        <div className="aside__options">
-          <form action="GET" className="form__sizeRange">
-            <div className="aside__labels aside__price-flex aside__sizeRange"></div>
-          </form>
-        </div>
-
-        <h1 className="aside__heading">
-          <i className="fas fa-clock aside__icons"></i>Working Time
-        </h1>
-        <div className="aside__options">
-          <div className="aside__checkbox">
-            <form action="GET" className="form__currentOpen">
-              <label className="aside__label">
-                current open
-                <input
-                  id="current"
-                  type="checkbox"
-                  className="current-open"
-                  name="current"
-                />
-              </label>
-            </form>
-            <form action="GET" className="form__specifiedTime">
-              <label className="aside__label">
-                specified
-                <input
-                  type="number"
-                  max="24"
-                  min="1"
-                  id="aside__specificTime"
-                  name="Specified"
-                />
-              </label>
-            </form>
-          </div>
-        </div>
-
-        <h1 className="aside__heading">
-          <i className="fas fa-pizza-slice aside__icons"></i>Categories
-        </h1>
-        <form action="GET" className="form__categories">
-          <div className="categories-container aside__labels"></div>
-          <div className="grid-categories anyALL-boxes">
-            <button className="btn btn-login u-margin-right" id="all">
-              ALL
-            </button>
-            <button className="btn btn-login" id="any">
-              ANY
-            </button>
-          </div>
-        </form>
+        <PriceRange prices={this.state.prices} />
+        <SizeRange sizes={this.state.sizes} />
+        <WorkingTime />
+        <Categories categories={this.state.categoriesList} />
       </aside>
     );
   }
